@@ -1,0 +1,50 @@
+* {
+  font-family:'Raleway','verdana', 'Arial', 'tahoma', sans-serif;
+}
+div.container {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.grafico, div.dados {
+  width: 59%;
+}
+div.dados {
+  margin-left: 2%;
+  width: 38%;
+}
+@media (max-width: 500px) {
+  div.grafico, div.dados {
+    width: 100%;
+  }
+div.dados{
+   order: 1;
+}
+div.grafico{
+   order: 2;
+ }
+}
+
+div.barra {
+  height: 50px;
+  background-color: silver;
+
+  margin: 10px 0px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 2px 2px black;
+  min-width: 20px;
+  transition: width 1s ease-out;
+}
+
+div.notas p {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+/* todo p dentro de um div com a class notas, sento que o p nao é o ultimo filho, apos ele colocar uma ','*/
+div.notas p:not(:last-child)::after{
+  content: ',';
+}
